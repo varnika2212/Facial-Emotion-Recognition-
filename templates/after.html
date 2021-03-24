@@ -1,0 +1,41 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <style>
+  html {
+      min-height: 100%;
+  }
+  body {
+    background: linear-gradient(45deg,#534666 , #138086);
+  }
+  .box {
+    display: inline-block;
+    margin-left: 25%;
+    margin-right:25%;
+    margin-top:10%;
+    padding: 20px;
+    width: 50%;
+    height:50%;
+    background-color:#F0F8FF;
+    border: 2px;
+    border-radius: 25px;
+    text-align: center;
+   }
+
+   h1{
+     font-family: monospace;
+     font-size: 60px;
+     margin-top: 20px;
+   }
+  </style>
+</head>
+
+<body>
+  <h1 align="center">Hmm, it seems you are {{data}}!</h1>
+  <div class="box" align="center">
+    <img src="{{url_for('static', filename='after.jpg')}}" alt="image" height=100% width = 100%>
+  </div>
+</body>
+</html>

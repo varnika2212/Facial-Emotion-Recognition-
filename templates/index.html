@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <style>
+  html {
+      min-height: 100%;
+  }
+  body {
+    background: linear-gradient(45deg,#534666 , #138086);
+  }
+  form {
+    display: inline-block;
+    margin-left: 25%;
+    margin-right:25%;
+    margin-top:10%;
+    padding: 20px;
+    width: 50%;
+    background-color:#F0F8FF;
+    border: 2px;
+    border-radius: 25px;
+    text-align: center;
+   }
+
+   h1{
+     font-family: monospace;
+     font-size: 60px;
+     margin-top: 20px;
+   }
+  </style>
+    <title></title>
+  </head>
+  <body>
+
+      <h1 align="center">Welcome to Face Emotion Detector!</h1>
+      <div class="box" align="center">
+        <form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Choose an Image</label>
+            <input class="btn btn-outline-dark form-control-file" type="file" name="file1" id="exampleFormControlFile1">
+          </div>
+          <input type="Submit" class="btn btn-lg btn-warning" value="SUBMIT">
+        </form>
+      </div>
+  </body>
+</html>

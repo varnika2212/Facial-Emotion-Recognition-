@@ -49,7 +49,7 @@ def after():
     # load weights into new model
     loaded_model.load_weights("model.h5")
     prediction=loaded_model.predict(image)
-    label_dict = {0:'Angry',1:'Disgusted',2:'Afraid',3:'Happy',4:'Neutral',5:'Sad',6:'Surprised'}
+    label_dict = {0:'Angry',1:'Disgusted',2:'Afraid',3:'Sad',4:'Neutral',5:'Happy',6:'Surprised'}
     prediction=np.argmax(prediction)
     final_prediction=label_dict[prediction]
     return render_template('after.html',data=final_prediction)
